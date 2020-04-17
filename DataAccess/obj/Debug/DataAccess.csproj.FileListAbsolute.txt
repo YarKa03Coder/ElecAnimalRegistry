@@ -1,0 +1,7 @@
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\obj\Debug\DataAccess.pdb
