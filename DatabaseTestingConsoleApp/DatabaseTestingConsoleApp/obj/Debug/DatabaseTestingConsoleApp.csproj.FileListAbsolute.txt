@@ -1,0 +1,14 @@
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\DatabaseTestingConsoleApp.exe.config
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\DatabaseTestingConsoleApp.exe
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\DatabaseTestingConsoleApp.pdb
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\DataAccess.dll
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\DevOne.Security.Cryptography.BCrypt.dll
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\DataAccess.pdb
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\obj\Debug\DatabaseTestingConsoleApp.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\obj\Debug\DatabaseTestingConsoleApp.csproj.CopyComplete
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\obj\Debug\DatabaseTestingConsoleApp.exe
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\obj\Debug\DatabaseTestingConsoleApp.pdb
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\WebApiHelper.dll
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\WebApiHelper.pdb
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DatabaseTestingConsoleApp\bin\Debug\Newtonsoft.Json.xml
