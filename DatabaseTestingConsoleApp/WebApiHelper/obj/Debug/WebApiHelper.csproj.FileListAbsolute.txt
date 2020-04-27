@@ -1,8 +1,0 @@
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiHelper\bin\Debug\WebApiHelper.dll
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiHelper\bin\Debug\WebApiHelper.pdb
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiHelper\obj\Debug\WebApiHelper.csprojAssemblyReference.cache
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiHelper\obj\Debug\WebApiHelper.dll
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiHelper\obj\Debug\WebApiHelper.pdb
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiHelper\bin\Debug\Newtonsoft.Json.dll
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiHelper\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiHelper\obj\Debug\WebApiHelper.csproj.CopyComplete
