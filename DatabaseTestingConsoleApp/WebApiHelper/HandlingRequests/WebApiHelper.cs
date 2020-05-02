@@ -11,6 +11,9 @@ using WebApiHelper.Models;
 
 namespace WebApiHelper.HandlingRequests
 {
+    /// <summary>
+    /// Stores methods for sending requests to server.
+    /// </summary>
     public static class WebApiHelper
     {
         private const string IP = "192.168.1.100";
@@ -19,9 +22,17 @@ namespace WebApiHelper.HandlingRequests
         private static HttpClient client = new HttpClient();
 
 
+        /// <summary>
+        /// Address of http server.
+        /// </summary>
         public static string BaseAddress { get => $"http://{IP}:{PORT}"; }
 
 
+        /// <summary>
+        /// Request that registers new user in database.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public static async Task<bool> RegisterUserAsync(RegisterUserModel user)
         {
             bool registrationSuccessful = false;
@@ -45,6 +56,13 @@ namespace WebApiHelper.HandlingRequests
             return registrationSuccessful;
         }
 
+        /// <summary>
+        /// Request provides user personal information 
+        /// if he enters email and password correctly.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public static async Task<FrontendUserModel> LogUserInAsync(string email, string password)
         {
             FrontendUserModel user = null;
@@ -67,6 +85,12 @@ namespace WebApiHelper.HandlingRequests
             return user;
         }
 
+        /// <summary>
+        /// Request provides user personal information
+        /// if one of his pet ids is entered correctly.
+        /// </summary>
+        /// <param name="uniquePetID"></param>
+        /// <returns></returns>
         public static async Task<FrontendUserModel> GetUserByPetIDAsync(int uniquePetID)
         {
             FrontendUserModel user = null;
@@ -89,6 +113,12 @@ namespace WebApiHelper.HandlingRequests
             return user;
         }
 
+        /// <summary>
+        /// Request that returns list of user pets
+        /// if his email is entered correctly.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public static async Task<List<PetModel>> GetUserPetsByEmailAsync(string email)
         {
             List<PetModel> pets = new List<PetModel>();
@@ -114,6 +144,11 @@ namespace WebApiHelper.HandlingRequests
             return pets;
         }
 
+        /// <summary>
+        /// Request checks if there is user with such email.
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public static async Task<bool> UserExistsAsync(string email)
         {
             bool userFound = false;

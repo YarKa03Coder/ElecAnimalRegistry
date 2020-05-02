@@ -85,3 +85,4 @@ C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiServer\obj\Debug\Web
 C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiServer\bin\DataAccess.dll
 C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiServer\bin\DevOne.Security.Cryptography.BCrypt.dll
 C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiServer\bin\DataAccess.pdb
+C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\WebApiServer\bin\Documentation.xml
