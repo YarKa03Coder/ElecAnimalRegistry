@@ -1,0 +1,15 @@
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\bin\Debug\netstandard2.0\ApplicationOOP.deps.json
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\bin\Debug\netstandard2.0\ApplicationOOP.dll
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\bin\Debug\netstandard2.0\ApplicationOOP.pdb
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\ApplicationOOP.csprojAssemblyReference.cache
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\LoginPage.xaml.g.cs
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\RegisterPage.xaml.g.cs
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\ApplicationOOP.csproj.CoreCompileInputs.cache
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\ApplicationOOP.AssemblyInfoInputs.cache
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\ApplicationOOP.AssemblyInfo.cs
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\ApplicationOOP.dll
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\ApplicationOOP.pdb
+C:\Users\AdMiN\source\repos\ApplicationOOP\ApplicationOOP\ApplicationOOP\obj\Debug\netstandard2.0\StubPage.xaml.g.cs

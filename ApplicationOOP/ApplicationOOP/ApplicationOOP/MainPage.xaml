@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ApplicationOOP"
+             x:Class="ApplicationOOP.MainPage">
+
+    <StackLayout x:Name="MainEntryPage">
+        <Button x:Name="Btn_LogIn" Text="Log in"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center" Clicked="LogInClicked"/>
+        <Button x:Name="Btn_SignUp" Text="Sign up"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center" Clicked="SignUpClicked"/>
+    </StackLayout>
+
+</ContentPage>
