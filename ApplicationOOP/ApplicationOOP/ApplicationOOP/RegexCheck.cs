@@ -41,6 +41,7 @@ namespace ApplicationOOP
                 return true;
             else
                 return false;
+            //return true;
         }
 
         public static bool ValidPhone(string phone)

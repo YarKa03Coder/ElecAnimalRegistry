@@ -16,7 +16,8 @@ namespace WebApiHelper.HandlingRequests
     /// </summary>
     public static class WebApiHelper
     {
-        private const string IP = "192.168.1.100";
+        //private const string IP = "192.168.1.100";
+        private const string IP = "192.168.1.101";
         private const int PORT  = 8080;
 
         private static HttpClient client = new HttpClient();

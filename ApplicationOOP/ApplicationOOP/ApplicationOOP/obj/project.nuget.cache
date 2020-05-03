@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "PtqxpajlgycuJ391uvoQdF7pP6401KHK1cEd3WI9rEq6gOWkx68ktMYDeBfg0JRd2vRZlsUrn5B7vOCv3nWGGA==",
+  "success": true,
+  "projectFilePath": "F:\\GITHUB_PROJECTS\\ElecAnimalRegistry\\ApplicationOOP\\ApplicationOOP\\ApplicationOOP\\ApplicationOOP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512"
+  ],
+  "logs": []
+}
