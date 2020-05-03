@@ -15,7 +15,7 @@
             <Entry x:Name="EntryPhone" Placeholder="Phone number"/>
 
             <Label x:Name="Lbl_email" Text="E-mail"/>
-            <Entry x:Name="Entry_email" Text ="{Binding EmailAddress}" Placeholder="E-mail"/>
+            <Entry x:Name="Entry_email" Placeholder="E-mail"/>
 
             <Label x:Name="Lbl_Password" Text="Password"/>
             <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>

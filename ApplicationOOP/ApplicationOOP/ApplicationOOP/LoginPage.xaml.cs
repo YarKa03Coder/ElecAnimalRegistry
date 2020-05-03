@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+using WebApiHelper.Models;
+using WebApiHelper.HandlingRequests;
+
 namespace ApplicationOOP
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -34,26 +37,33 @@ namespace ApplicationOOP
         private void InputInfo()
         {
             Entry_email.Completed += (s, e) => Entry_Password.Focus();
-            Entry_Password.Completed += (s, e) => LogInProcedure(s, e);
+            Entry_Password.Completed += async (s, e) => LogInProcedure(s, e);
         }
 
-        private void LogInProcedure(object sender, EventArgs e)
+        private async void LogInProcedure(object sender, EventArgs e)
         {
-            /*if (RegexCheck.ValidEmail(Entry_email.Text) && RegexCheck.ValidPassword(Entry_Password.Text))
+            if (RegexCheck.ValidEmail(Entry_email.Text) && RegexCheck.ValidPassword(Entry_Password.Text))
             {
-                // LOGIN REQUEST
-                FrontendUserModel user = LogUserInAsync(Entry_email.ToString(), Entry_Password.ToString());
+                FrontendUserModel user = await WebApiHelper
+                                         .HandlingRequests
+                                         .WebApiHelper
+                                         .LogUserInAsync(Entry_email.Text, Entry_Password.Text);
+                
+                //LOGIN REQUEST
                 if (!user.Equals(null))
                 {
                     //it's just a stub, a new page with info will appear if success
-                    Navigation.PushModalAsync(new StubPage());
+                    await Navigation.PushModalAsync(new StubPage());
                 }
                 else
-                    DisplayAlert("Login", "Such user was not found", "Ok");
+                {
+                    await DisplayAlert("Login", "Such user is not found", "Ok");
+                }                   
             }
             else
-                DisplayAlert("Login", "E-mail or Password is wrong. Please check and try again", "Ok");
-            // if user does not remember, need some mechanism to reset the password*/
-        }
+            {
+                await DisplayAlert("Login", "E-mail or Password is wrong. Please check and try again", "Ok");
+            }         
+        }                 
     }
 }

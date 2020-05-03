@@ -8,6 +8,8 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
+
 namespace ApplicationOOP
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -45,19 +47,23 @@ namespace ApplicationOOP
             Entry_Password.Completed += (s, e) => SignUpProcedure(s, e);
         }
 
-        private void SignUpProcedure(object sender, EventArgs e)
+        private async void SignUpProcedure(object sender, EventArgs e)
         {
-            /*if(Check())
-            { 
+            if (Check())
+            {
+                bool registration = await WebApiHelper
+                                          .HandlingRequests
+                                          .WebApiHelper
+                                          .RegisterUserAsync(new FilledUser(this).InputInfo());
                 // REGISTRATION REQUEST
-                if (RegisterUserAsync(new FilledUser(this).InputInfo()))
+                if (registration)
                 {
                     Navigation.RemovePage(this);
-                    Navigation.PushModalAsync(new LoginPage());
+                    await Navigation.PushModalAsync(new LoginPage());
                 }
             }
             else
-                DisplayAlert("Sign Up", "Something went wrong. Please try again", "Ok");*/
+                await DisplayAlert("Sign Up", "Something went wrong. Please try again", "Ok");
         }
 
         private bool Check()
