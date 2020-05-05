@@ -42,28 +42,20 @@ namespace ApplicationOOP
 
         private async void LogInProcedure(object sender, EventArgs e)
         {
-            if (RegexCheck.ValidEmail(Entry_email.Text) && RegexCheck.ValidPassword(Entry_Password.Text))
+            if (ConnectionCheck.CheckForInternetConnection())
             {
-                FrontendUserModel user = await WebApiHelper
-                                         .HandlingRequests
-                                         .WebApiHelper
-                                         .LogUserInAsync(Entry_email.Text, Entry_Password.Text);
-                
-                //LOGIN REQUEST
+                // LOGIN REQUEST
+                FrontendUserModel user = await LogUserInAsync(Entry_email.Text, Entry_Password.Text);
                 if (!user.Equals(null))
                 {
                     //it's just a stub, a new page with info will appear if success
                     await Navigation.PushModalAsync(new StubPage());
                 }
                 else
-                {
                     await DisplayAlert("Login", "Such user is not found", "Ok");
-                }                   
             }
             else
-            {
-                await DisplayAlert("Login", "E-mail or Password is wrong. Please check and try again", "Ok");
-            }         
+                await DisplayAlert("Login", "Check your internet connection", "Ok");
         }                 
     }
 }
