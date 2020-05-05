@@ -7,6 +7,7 @@ using System.Windows.Input;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static WebApiHelper.HandlingRequests.WebApiHelper;
 
 
 
@@ -34,6 +35,7 @@ namespace ApplicationOOP
             Lbl_email.TextColor = colorful_register.SetTextColor(Color.White);
             Lbl_Password.TextColor = colorful_register.SetTextColor(Color.White); 
             Lbl_Phone.TextColor = colorful_register.SetTextColor(Color.White);
+            Lbl_Confirm.TextColor = colorful_register.SetTextColor(Color.White);
             Btn_Signup.BackgroundColor = colorful_register.SetButtonColor(Color.White);
             Btn_Signup.TextColor = colorful_register.SetTextColor(Color.Gray);
         }
@@ -44,23 +46,25 @@ namespace ApplicationOOP
             Entry_LastName.Completed += (s, e) => EntryPhone.Focus();
             EntryPhone.Completed += (s, e) => Entry_email.Focus();
             Entry_email.Completed += (s, e) => Entry_Password.Focus();
-            Entry_Password.Completed += (s, e) => SignUpProcedure(s, e);
+            Entry_Password.Completed += (s, e) => Entry_PassConfirm.Focus();
+            Entry_PassConfirm.Completed += (s, e) => SignUpProcedure(s, e);
         }
 
         private async void SignUpProcedure(object sender, EventArgs e)
         {
             if (Check())
             {
-                bool registration = await WebApiHelper
-                                          .HandlingRequests
-                                          .WebApiHelper
-                                          .RegisterUserAsync(new FilledUser(this).InputInfo());
-                // REGISTRATION REQUEST
-                if (registration)
+                if (ConnectionCheck.CheckForInternetConnection())
                 {
-                    Navigation.RemovePage(this);
-                    await Navigation.PushModalAsync(new LoginPage());
+                    // REGISTRATION REQUEST
+                    if (await RegisterUserAsync(new FilledUser(this).InputInfo()))
+                    {
+                        Navigation.RemovePage(this);
+                        await Navigation.PushModalAsync(new LoginPage());
+                    }
                 }
+                else
+                    await DisplayAlert("Sign Up", "Check your internet connection", "Ok");
             }
             else
                 await DisplayAlert("Sign Up", "Something went wrong. Please try again", "Ok");
@@ -72,7 +76,7 @@ namespace ApplicationOOP
             {
                 if(RegexCheck.ValidEmail(Entry_email.Text) && RegexCheck.ValidPhone(EntryPhone.Text))
                 {
-                    if(RegexCheck.ValidPassword(Entry_Password.Text))
+                    if(RegexCheck.ValidPassword(Entry_Password.Text) && RegexCheck.ConfirmPassword(Entry_PassConfirm.Text, Entry_Password))
                     {
                         return true;
                     }

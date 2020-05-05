@@ -19,6 +19,9 @@
 
             <Label x:Name="Lbl_Password" Text="Password"/>
             <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
+            
+            <Label x:Name="Lbl_Confirm" Text="Confirm Password"/>
+            <Entry x:Name="Entry_PassConfirm" Placeholder="Confirm Password" IsPassword="True"/>
 
             <Button x:Name="Btn_Signup" Text="Sign Up" Clicked="SignUpProcedure"/>
         </StackLayout>
