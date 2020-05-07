@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ApplicationOOP.App.xaml", "App.xaml", typeof(global::ApplicationOOP.App))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ApplicationOOP.VetClinic.xaml", "VetClinic.xaml", typeof(global::ApplicationOOP.VetClinic))]
 
 namespace ApplicationOOP {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("App.xaml")]
-    public partial class App : global::Xamarin.Forms.Application {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("VetClinic.xaml")]
+    public partial class VetClinic : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(App));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(VetClinic));
         }
     }
 }

@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ApplicationOOP.App.xaml", "App.xaml", typeof(global::ApplicationOOP.App))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("ApplicationOOP.FindOwner.xaml", "FindOwner.xaml", typeof(global::ApplicationOOP.FindOwner))]
 
 namespace ApplicationOOP {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("App.xaml")]
-    public partial class App : global::Xamarin.Forms.Application {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("FindOwner.xaml")]
+    public partial class FindOwner : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(App));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(FindOwner));
         }
     }
 }
