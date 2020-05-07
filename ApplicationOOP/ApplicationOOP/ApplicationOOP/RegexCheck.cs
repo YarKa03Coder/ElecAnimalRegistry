@@ -25,7 +25,7 @@ namespace ApplicationOOP
 
         public static bool ValidPassword(string password)
         {
-            var password_pattern = "^((?!.*[\\s])(?=.*[A-Z])(?=.*\\d).{7,12})";
+            var password_pattern = "^((?!.*[\\s])(?=.*[a-z])(?=.*\\d).{7,12})";
 
             return Regex.IsMatch(password, password_pattern);
         }
