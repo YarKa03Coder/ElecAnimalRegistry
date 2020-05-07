@@ -8,7 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using WebApiHelper.Models;
-using WebApiHelper.HandlingRequests;
+using static WebApiHelper.HandlingRequests.WebApiHelper;
 
 namespace ApplicationOOP
 {
@@ -37,7 +37,7 @@ namespace ApplicationOOP
         private void InputInfo()
         {
             Entry_email.Completed += (s, e) => Entry_Password.Focus();
-            Entry_Password.Completed += async (s, e) => LogInProcedure(s, e);
+            Entry_Password.Completed += (s, e) => LogInProcedure(s, e);
         }
 
         private async void LogInProcedure(object sender, EventArgs e)
@@ -48,8 +48,8 @@ namespace ApplicationOOP
                 FrontendUserModel user = await LogUserInAsync(Entry_email.Text, Entry_Password.Text);
                 if (!user.Equals(null))
                 {
-                    //it's just a stub, a new page with info will appear if success
-                    await Navigation.PushModalAsync(new StubPage());
+                    Navigation.RemovePage(this);
+                    await Navigation.PushModalAsync(new EntrancePage());
                 }
                 else
                     await DisplayAlert("Login", "Such user is not found", "Ok");
