@@ -72,7 +72,7 @@ namespace ApplicationOOP
 
         private bool Check()
         {
-            if(RegexCheck.Valid_firstName(Entry_FirstName.Text) && RegexCheck.Valid_lastName(Entry_LastName.Text))
+            if(!RegexCheck.Valid_firstName(Entry_FirstName.Text) && !RegexCheck.Valid_lastName(Entry_LastName.Text))
             {
                 if(RegexCheck.ValidEmail(Entry_email.Text) && RegexCheck.ValidPhone(EntryPhone.Text))
                 {
@@ -81,7 +81,11 @@ namespace ApplicationOOP
                         return true;
                     }
                     else
-                    { DisplayAlert("Registration", "Password is wrong", "Ok"); return false; }
+                    {
+                        DisplayAlert("Registration", "Password is wrong", "Ok");
+                        Entry_PassConfirm.Text = String.Empty;
+                        return false;
+                    }
                 }
                 else
                 { DisplayAlert("Registration", "Check e-mail and phone number again", "Ok"); return false; }
