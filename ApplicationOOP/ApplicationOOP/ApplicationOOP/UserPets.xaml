@@ -5,9 +5,25 @@
              Title="User Pets">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to USER PETS!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <CarouselView x:Name="CarouselView" PeekAreaInsets="50">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame BorderColor="Grey" Margin="8" HasShadow="True" HeightRequest="250" CornerRadius="20" VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Image Source="{Binding ImagePath}"/>
+                                    <Label x:Name="Id" Text="{Binding UniqueID}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Animal" Text="{Binding AnimalType}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Breed" Text="{Binding BreedType}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Gender" Text="{Binding Gender}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Birth" Text="{Binding BirthDate}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Age" Text="{Binding AgeInStringFormat}" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

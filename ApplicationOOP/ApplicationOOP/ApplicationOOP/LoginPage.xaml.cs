@@ -49,7 +49,7 @@ namespace ApplicationOOP
                 if (!user.Equals(null))
                 {
                     Navigation.RemovePage(this);
-                    await Navigation.PushModalAsync(new EntrancePage());
+                    await Navigation.PushModalAsync(new EntrancePage(user));
                 }
                 else
                     await DisplayAlert("Login", "Such user is not found", "Ok");

@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using WebApiHelper.Models;
 
 namespace ApplicationOOP
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class EntrancePage : MasterDetailPage
 	{
-		public EntrancePage ()
+        FrontendUserModel user;
+
+		public EntrancePage (FrontendUserModel user)
 		{
 			InitializeComponent ();
-            Detail = new NavigationPage(new UserPets());
+            this.user = user;
+            Detail = new NavigationPage(new UserPets(this.user));
             IsPresented = false;
         }
 
         private void User_animals(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new UserPets());
+            Detail = new NavigationPage(new UserPets(this.user));
             IsPresented = false;
         }
 
