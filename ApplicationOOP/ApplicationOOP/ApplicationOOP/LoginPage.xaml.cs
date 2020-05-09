@@ -46,18 +46,21 @@ namespace ApplicationOOP
             {
                 // LOGIN REQUEST
                 FrontendUserModel user = await LogUserInAsync(Entry_email.Text, Entry_Password.Text);
-                try
+
+                if (user != null)
                 {
                     Navigation.RemovePage(this);
                     await Navigation.PushModalAsync(new EntrancePage(user));
                 }
-                catch (Exception exception)
+                else
                 {
                     await DisplayAlert("Login", "Such user is not found", "Ok");
                 }
             }
             else
+            {
                 await DisplayAlert("Login", "Check your internet connection", "Ok");
+            }
         }                 
     }
 }
