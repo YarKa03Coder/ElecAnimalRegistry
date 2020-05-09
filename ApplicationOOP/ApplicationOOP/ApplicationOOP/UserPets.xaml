@@ -9,7 +9,7 @@
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            <Frame BorderColor="Grey" Margin="8" HasShadow="True" HeightRequest="250" CornerRadius="20" VerticalOptions="CenterAndExpand">
+                            <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="250" CornerRadius="20" VerticalOptions="CenterAndExpand">
                                 <StackLayout>
                                     <Image Source="{Binding ImagePath}"/>
                                     <Label x:Name="Id" Text="{Binding UniqueID}" HorizontalOptions="Center"/>
