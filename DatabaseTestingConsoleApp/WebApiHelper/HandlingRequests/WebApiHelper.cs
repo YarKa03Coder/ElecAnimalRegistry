@@ -138,7 +138,9 @@ namespace WebApiHelper.HandlingRequests
 
                 foreach (var pet in JArray.Parse(json))
                 {
-                    pets.Add(JsonConvert.DeserializeObject<PetModel>(pet.ToString()));
+                    PetModel deserializedPetModel = JsonConvert.DeserializeObject<PetModel>(pet.ToString());
+                    deserializedPetModel.ImagePath = $"{BaseAddress}/{deserializedPetModel.ImagePath}";
+                    pets.Add(deserializedPetModel);
                 }               
             }
 

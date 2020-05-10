@@ -27,7 +27,7 @@ namespace WebApiHelper.Models
         public string AnimalType { get; set; }
 
         /// <summary>
-        /// Type of breed (like shelpherd, bulldog, etc.).
+        /// Type of breed (like shepherd, bulldog, etc.).
         /// </summary>
         public string BreedType { get; set; }
 
@@ -40,6 +40,17 @@ namespace WebApiHelper.Models
         /// Image path of pet in server machine to be displayed on screen.
         /// </summary>
         public string ImagePath { get; set; }
+
+        /// <summary>
+        /// Converts birthdate to short date string.
+        /// </summary>
+        public string ToShortStringBirthDate
+        {
+            get
+            {
+                return BirthDate.ToShortDateString();
+            }
+        }
 
         /// <summary>
         /// Represents age of pet in format y-m-d.
@@ -62,7 +73,7 @@ namespace WebApiHelper.Models
                 }
 
                 // decrease year difference if current month is negative
-                // increase month defference by twelve
+                // increase month difference by twelve
                 if (months < 0)
                 {
                     years--;
@@ -73,12 +84,44 @@ namespace WebApiHelper.Models
                 // on the same year and month, so we can find difference in days
                 int days = (now - BirthDate.AddMonths(years * 12 + months)).Days;
 
-                // getting age in format y-m-d
-                return String.Format("{0} year{1}, {2} month{3}, {4} day{5}",
-                                      years,  (years == 1) ? "" : "s",
-                                      months, (months == 1) ? "" : "s",
-                                      days,   (days == 1) ? "" : "s");
+                return toAgeInString(years, months, days);
             }
         }
+
+
+        private string toAgeInString(int years, int months, int days)
+        {
+            string yearsInString = formatAnimalDataFields(years, "year");
+            string monthInString = formatAnimalDataFields(months, "month");
+            string dayInString   = formatAnimalDataFields(days, "day");
+
+            List<string> dateFieldsList = new List<string>();
+
+            if (yearsInString != "") dateFieldsList.Add(yearsInString);
+            if (monthInString != "") dateFieldsList.Add(monthInString);
+            if (dayInString   != "")   dateFieldsList.Add(dayInString);
+
+            return string.Join(", ", dateFieldsList);
+        }
+
+        private string formatAnimalDataFields(int dataField, string dataFieldName)
+        {
+            string formattedDataField = "";
+
+            if (dataField != 0)
+            {
+                if (dataField == 1)
+                {
+                    formattedDataField = $"{dataField} {dataFieldName}";
+                }
+                else
+                {
+                    formattedDataField = $"{dataField} {dataFieldName}s";
+                }
+            }
+
+            return formattedDataField;
+        }
+
     }
 }
