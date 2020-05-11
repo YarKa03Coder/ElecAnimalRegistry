@@ -1,7 +1,0 @@
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\bin\Release\DataAccess.dll
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\bin\Release\DataAccess.pdb
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\bin\Release\DevOne.Security.Cryptography.BCrypt.dll
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\obj\Release\DataAccess.csprojAssemblyReference.cache
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\obj\Release\DataAccess.csproj.CopyComplete
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\obj\Release\DataAccess.dll
-C:\Users\Admin\source\repos\DatabaseTestingConsoleApp\DataAccess\obj\Release\DataAccess.pdb

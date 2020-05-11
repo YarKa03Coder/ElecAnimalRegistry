@@ -1,3 +1,0 @@
-F:\GITHUB_PROJECTS\ElecAnimalRegistry\ApplicationOOP\ApplicationOOP\ApplicationOOP.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
-F:\GITHUB_PROJECTS\ElecAnimalRegistry\ApplicationOOP\ApplicationOOP\ApplicationOOP.Android\obj\Debug\81\build.props
-F:\GITHUB_PROJECTS\ElecAnimalRegistry\ApplicationOOP\ApplicationOOP\ApplicationOOP.Android\obj\Debug\81\adb.props
