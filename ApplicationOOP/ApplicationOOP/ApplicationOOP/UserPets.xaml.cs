@@ -30,7 +30,7 @@ namespace ApplicationOOP
             _pets = await GetUserPetsByEmailAsync(_userModel.Email.ToString());
             if (_pets.Any())
             {
-                CarouselView.ItemsSource = _pets;
+                PetsView.ItemsSource = _pets;
             }
             else
             {

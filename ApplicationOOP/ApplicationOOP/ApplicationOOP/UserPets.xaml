@@ -5,7 +5,7 @@
              Title="User Pets">
     <ContentPage.Content>
         <StackLayout>
-            <CarouselView x:Name="CarouselView" PeekAreaInsets="50">
+            <CarouselView x:Name="PetsView" PeekAreaInsets="50">
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
