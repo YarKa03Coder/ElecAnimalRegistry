@@ -4,10 +4,10 @@
              x:Class="ApplicationOOP.FindOwner"
              Title="Find Owner">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to FIND OWNER!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout x:Name="LayoutUser">
+            <SearchBar x:Name="UserSearchBar" Placeholder="Input pet id here" SearchButtonPressed="StartFindingUser"/>
+            <Frame x:Name="FrameOwner" Margin ="7" BorderColor="Gray" HasShadow="True" CornerRadius="20" VerticalOptions="CenterAndExpand">
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
