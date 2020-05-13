@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using Xamarin.Essentials;
@@ -42,16 +43,25 @@ namespace ApplicationOOP
                }
                else if (status != PermissionStatus.Unknown)
                {
-                   await DisplayAlert("Location","Location is denied! Please allow it, if you want use Google Maps","Ok");
+                   await DisplayAlert("Location", "Location is denied! Please allow it, if you want use Google Maps",
+                       "Ok");
                }
            }
            catch (Exception ex)
            {
-               await DisplayAlert("Location","Something went wrong! Try again","Ok");
+               if (ex.Message.Contains("FLAG_ACTIVITY_NEW_TASK"))
+               {
+                    TryOpenMap(true);
+               }
+               else
+               {
+                   await DisplayAlert("Location", "Something went wrong! Try again", "Ok");
+               }
+               
            }
        }
 
-       private void TryOpenMap()
+       private void TryOpenMap(bool flagActivity = false)
        {
            IsInstallApplication installApplication = DependencyService.Get<IsInstallApplication>();
            bool isInstall = installApplication.IsInstall("com.google.android.apps.maps");
@@ -60,7 +70,7 @@ namespace ApplicationOOP
                if (IsLocationSet())
                {
                    IMap map = DependencyService.Get<IMap>();
-                   map.TryOpenMap(Latitude, Longitude, "Ветеринарные клиники");
+                   map.TryOpenMap(Latitude, Longitude, "Ветеринарные клиники",flagActivity);
                }
                else
                {

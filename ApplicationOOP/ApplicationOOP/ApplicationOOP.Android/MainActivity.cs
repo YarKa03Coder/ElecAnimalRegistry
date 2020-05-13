@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.Views;
@@ -34,14 +35,18 @@ namespace ApplicationOOP.Droid
             
         }
 
-        public void TryOpenMap(double latitude, double longitude, string findOption)
+        public void TryOpenMap(double latitude, double longitude, string findOption, bool flagActivity = false)
         {
             Android.Net.Uri intentUri = Android.Net.Uri.Parse
                 ($"geo:{latitude.ToString(CultureInfo.InvariantCulture)},{longitude.ToString(CultureInfo.InvariantCulture)}?q={findOption}");
 
            Android.Content.Intent mapIntent = new Android.Content.Intent(Android.Content.Intent.ActionView, intentUri);
-            mapIntent.SetPackage("com.google.android.apps.maps");
-            Android.App.Application.Context.StartActivity(mapIntent);
+           mapIntent.SetPackage("com.google.android.apps.maps");
+           if (flagActivity)
+           {
+               mapIntent.AddFlags(ActivityFlags.NewTask);
+           }
+           Android.App.Application.Context.StartActivity(mapIntent);
         }
 
         public bool IsInstall(string packageName)
