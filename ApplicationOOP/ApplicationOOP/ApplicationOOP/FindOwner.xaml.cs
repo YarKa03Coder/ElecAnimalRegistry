@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebApiHelper.Models;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static WebApiHelper.HandlingRequests.WebApiHelper;
@@ -52,12 +53,12 @@ namespace ApplicationOOP
             _phoneFormattedString = new FormattedString();
             _emailFormattedString = new FormattedString();
 
-            var span_phone = new Span(){Text = _frontendUser.Phone};
-            var span_email = new Span(){Text = _frontendUser.Email};
+            var span_phone = new Span(){Text = _frontendUser.Phone, TextDecorations = TextDecorations.Underline, TextColor = Color.Blue};
+            var span_email = new Span(){Text = _frontendUser.Email, TextDecorations = TextDecorations.Underline, TextColor = Color.Blue};
             span_email.GestureRecognizers.Add(new TapGestureRecognizer
-                {Command = new Command(async () => await DisplayAlert("Tapped","This is email","Ok"))});
+                {Command = new Command(async () => await Email.ComposeAsync("Missed pet","I have found your dog, write me",span_email.Text))});
             span_phone.GestureRecognizers.Add(new TapGestureRecognizer
-                {Command = new Command(async () => await DisplayAlert("Tapped", "This is phone", "Ok"))});
+                {Command = new Command(new Action(()=> PhoneDialer.Open(span_phone.Text)))});
 
 
             _phoneFormattedString.Spans.Add(
@@ -67,6 +68,7 @@ namespace ApplicationOOP
             _emailFormattedString.Spans.Add(
                 new Span(){Text = "E-mail: "});
             _emailFormattedString.Spans.Add(span_email);
+
         }
 
         private void CreateFrame_user(bool empty = false)
