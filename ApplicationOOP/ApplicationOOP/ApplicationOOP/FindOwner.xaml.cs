@@ -56,7 +56,7 @@ namespace ApplicationOOP
             var span_phone = new Span(){Text = _frontendUser.Phone, TextDecorations = TextDecorations.Underline, TextColor = Color.Blue};
             var span_email = new Span(){Text = _frontendUser.Email, TextDecorations = TextDecorations.Underline, TextColor = Color.Blue};
             span_email.GestureRecognizers.Add(new TapGestureRecognizer
-                {Command = new Command(async () => await Email.ComposeAsync("Missed pet","I have found your dog, write me",span_email.Text))});
+                {Command = new Command(async () => await Email.ComposeAsync("Missed pet","I have found your pet, write me",span_email.Text))});
             span_phone.GestureRecognizers.Add(new TapGestureRecognizer
                 {Command = new Command(new Action(()=> PhoneDialer.Open(span_phone.Text)))});
 
