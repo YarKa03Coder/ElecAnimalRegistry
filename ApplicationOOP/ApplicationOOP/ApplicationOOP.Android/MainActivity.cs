@@ -12,7 +12,7 @@ using Xamarin.Forms;
 [assembly: Dependency(typeof(ApplicationOOP.Droid.MainActivity))]
 namespace ApplicationOOP.Droid
 {
-    [Activity(Label = "ApplicationOOP", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+    [Activity(Label = "PetsUA", Icon = "@drawable/logo_image_icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
         ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity, IMap, IsInstallApplication
     {
