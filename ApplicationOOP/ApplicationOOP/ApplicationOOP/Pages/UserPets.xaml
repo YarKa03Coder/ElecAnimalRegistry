@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApplicationOOP.UserPets"
+             Title="User Pets">
+    <ContentPage.Content>
+        <StackLayout>
+            <CarouselView x:Name="PetsView" PeekAreaInsets="50">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame BorderColor="Gray" Margin="8" HasShadow="True" HeightRequest="265" CornerRadius="20" VerticalOptions="CenterAndExpand">
+                                <StackLayout>
+                                    <Image Source="{Binding ImagePath}"/>
+                                    <Label x:Name="Id" Text="{Binding UniqueID}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Animal" Text="{Binding AnimalType}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Breed" Text="{Binding BreedType}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Gender" Text="{Binding Gender}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Birth" Text="{Binding ToShortStringBirthDate}" HorizontalOptions="Center"/>
+                                    <Label x:Name="Age" Text="{Binding AgeInStringFormat}" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ApplicationOOP.RegisterPage">
+    <ContentPage.Content>
+        
+        <StackLayout x:Name="RegisterFill">
+            <Label x:Name="Lbl_FirstName" Text="First Name"/>
+            <Entry x:Name="Entry_FirstName" Placeholder="FirstName"/>
+
+            <Label x:Name="Lbl_LastName" Text="Last Name"/>
+            <Entry x:Name="Entry_LastName" Placeholder="Last Name"/>
+            
+            <Label x:Name="Lbl_Phone" Text="Phone number"/>
+            <Entry x:Name="EntryPhone" Placeholder="Phone number"/>
+
+            <Label x:Name="Lbl_email" Text="E-mail"/>
+            <Entry x:Name="Entry_email" Placeholder="E-mail"/>
+
+            <Label x:Name="Lbl_Password" Text="Password"/>
+            <Entry x:Name="Entry_Password" Placeholder="Password" IsPassword="True"/>
+            
+            <Label x:Name="Lbl_Confirm" Text="Confirm Password"/>
+            <Entry x:Name="Entry_PassConfirm" Placeholder="Confirm Password" IsPassword="True"/>
+
+            <Button x:Name="Btn_Signup" Text="Sign Up" Clicked="SignUpProcedure"/>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
